@@ -1,0 +1,33 @@
+package com.sps.versionUpdate;
+
+import java.util.Scanner;
+
+//string expression under switch example
+public class Java8SwitchExample1 {
+	public static void main(String[] args) {
+		Scanner obj=new Scanner(System.in);
+		System.out.println("Enter 1st Number: ");
+		int n1=obj.nextInt();
+		System.out.println("Enter 2nd Number: ");
+		int n2=obj.nextInt();
+//		String c="Sub";
+		System.out.print("Enter String(i.e. Add/Sub/Mul/Div): ");
+		String c=obj.nextLine();
+		switch(c)
+		{
+		case "Add":
+			System.out.println(a+b);
+			break;
+		case "Sub":
+			System.out.println(a-b);
+			break;
+		case "Mul":
+			System.out.println(a*b);
+			break;
+		case "Div":
+			System.out.println(a/b);
+		default:
+			System.out.println("Invalid Choice");
+		}
+	}
+}

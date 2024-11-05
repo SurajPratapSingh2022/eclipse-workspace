@@ -1,0 +1,16 @@
+package com.sps.main;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
+public class PrintStreamExample1 {
+	public static void main(String[] args) throws FileNotFoundException {
+		FileOutputStream fout=new FileOutputStream("C:\\Users\\suraj\\eclipse-workspace\\JavaProg\\bin\\com\\sps\\main\\test.txt");
+		PrintStream p1=new PrintStream(fout);
+		p1.println(400);
+		p1.println("you like me");
+		p1.close();
+		fout.close();
+	}
+}

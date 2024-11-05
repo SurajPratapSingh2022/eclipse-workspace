@@ -1,0 +1,26 @@
+package com.sps.main;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class FileOutputStreamExample1 {
+    public static void main(String[] args) {
+        FileOutputStream ofile = null;
+        byte[] b1 = { 'suraj', 'chandu' };
+        try {
+            ofile = new FileOutputStream("C:\\Users\\suraj\\eclipse-workspace\\JavaProg\\src\\com\\sps\\main\\test.txt");
+            ofile.write(b1);
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        } finally {
+            if (ofile != null) {
+                try {
+                    ofile.close();
+                } catch (IOException e) {
+                    System.out.println("Failed to close the file: " + e.getMessage());
+                }
+            }
+        }
+    }
+}
+

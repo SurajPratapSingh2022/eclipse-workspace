@@ -1,0 +1,84 @@
+package com.sps.multithreading;
+
+class A {
+    int num;
+    boolean valueSet = false; // Corrected naming convention
+
+    // Synchronized method to produce a number
+    public synchronized void put(int num) {
+        while (valueSet) {
+            try {
+                wait();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("Put: " + num);
+        this.num = num;
+        valueSet = true;
+        notify(); // Notify the consumer
+    }
+
+    // Synchronized method to consume a number
+    public synchronized void get() {
+        while (!valueSet) {
+            try {
+                wait();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println("Got: " + num);
+        valueSet = false;
+        notify(); // Notify the producer
+    }
+}
+
+class Producer implements Runnable {
+    A a;
+
+    public Producer(A a) {
+        this.a = a;
+        new Thread(this, "Producer").start();
+    }
+
+    public void run() {
+        int i = 0;
+        while (true) {
+            a.put(i++);
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+class Consumer implements Runnable {
+    A a;
+
+    public Consumer(A a) {
+        this.a = a;
+        new Thread(this, "Consumer").start();
+    }
+
+    public void run() {
+        while (true) {
+            a.get();
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
+
+public class InterThreadExample2 {
+    public static void main(String[] args) {
+        A a = new A();
+        new Producer(a);
+        new Consumer(a);
+    }
+}

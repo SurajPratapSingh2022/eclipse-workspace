@@ -1,0 +1,14 @@
+package com.sps.javaVersionUpdate;
+
+abstract class work{
+	abstract public void calc(int a, int b);
+}
+public class Java8AnonymousInnerClassExample1 {
+	public static void main(String[] args) {
+		work obj=new work() {
+			public void calc(int a, int b) {
+				System.out.println("Sum= "+(a+b));
+			}
+		};
+	}
+}

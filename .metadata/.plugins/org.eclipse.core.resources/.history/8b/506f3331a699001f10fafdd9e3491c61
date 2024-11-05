@@ -1,0 +1,11 @@
+package com.sps.javaVersionUpdate;
+//example of lambda expression
+interface task{
+	public void msg();
+}
+public class LamdaExpressionExample3 {
+	public static void main(String[] args) {
+		task obj=()->System.out.println("Developed by Dhananjay");
+		obj.msg();
+	}
+}

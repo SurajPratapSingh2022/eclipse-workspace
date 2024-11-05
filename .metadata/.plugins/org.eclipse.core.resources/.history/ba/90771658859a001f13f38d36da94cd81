@@ -1,0 +1,13 @@
+package com.sps.main;
+
+public class ByteArrayOutputStream {
+	public static void main(String[] args) {
+		FileOutputStream f1=new FileOutputStream("C:\\Users\\suraj\\eclipse-workspace\\JavaProg\\bin\\com\\sps\\main\\test.txt");
+		FileOutputStream f2=new FileOutputStream("C:\\Users\\suraj\\eclipse-workspace\\JavaProg\\bin\\com\\sps\\main\\doc.txt");
+		ByteArrayOutputStream b1=new ByteArrayOutputStream();
+		b1.write(123);
+		b1.writeTo(f1);
+		b1.writeTo(f2);
+		b1.flush();
+	}
+}

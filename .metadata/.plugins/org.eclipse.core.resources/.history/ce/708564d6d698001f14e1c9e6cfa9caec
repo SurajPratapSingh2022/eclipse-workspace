@@ -1,0 +1,36 @@
+package com.sps.javaAbstraction;
+
+interface work{
+	public void calc(int a,int b);
+	default void info() {
+		System.out.println("Developer Information");
+	}
+}
+class amit implements work{
+	public void calc(int a,int b) {
+		System.out.println("Sum: "+(a+b));
+	}
+}
+class amar implements work{
+	public void calc(int a,int b) {
+		System.out.println("Subtraction: "+(a-b));
+	}
+}
+class anuj implements work{
+	public void calc(int a, int b) {
+		System.out.println("Multiplication: "+(a*b));
+	}
+	public void info() {
+		System.out.println("Developed by Anuj");
+	}
+}
+public class DefaultAndStaticInterfaceExample1 {
+	public static void main(String[] args) {
+		amar amarobj=new amar();
+		amarobj.calc(10,20);
+		amit amitobj=new amit();
+		amitobj.calc(10, 20);
+		anuj anujobj=new anuj();
+		anujobj.calc(10, 20);
+	}
+}

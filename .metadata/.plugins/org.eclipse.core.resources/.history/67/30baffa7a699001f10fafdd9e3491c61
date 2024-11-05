@@ -1,0 +1,16 @@
+package com.sps.javaVersionUpdate;
+
+interface task{
+	public void msg();
+}
+class dhananjay implements task{
+	public void msg() {
+		System.out.println("this method is defined by dhananjay");
+	}
+}
+public class LambdaExpressionExample2 {
+	public static void main(String[] args) {
+		dhananjay obj=new dhananjay();
+		obj.msg();
+	}
+}

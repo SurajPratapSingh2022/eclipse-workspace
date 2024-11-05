@@ -1,0 +1,22 @@
+package com.sps.javaVersionUpdate;
+
+import java.lang.annotation.Repeatable;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+@Retention(RetentionPolicy.RUNTIME)
+@Repeatable(Employees.class)
+@interface Employee2{
+	String name();
+	int salary();
+}
+@interface Employees{
+	Employee2[] value();
+}
+@Employee2(name="Anuj", salary=50000)
+@Employee2(name="Kamal",salary=80000)
+public class Java8RepeatingAnnotationExample2 {	
+	public static void main(String[] args) {
+		Employee2 obj=Java8RepeatingAnnotationExample2.class.getAnnotation(Employee2.class);
+		System.out.println(obj.name()+"\t"+obj.salary());
+	}
+}

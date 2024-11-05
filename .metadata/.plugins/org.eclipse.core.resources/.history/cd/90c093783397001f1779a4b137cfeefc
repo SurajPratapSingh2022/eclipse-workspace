@@ -1,0 +1,18 @@
+package com.sps.main;
+
+public class StringExample {
+	public static void main(String[] args) {
+		String str1="MakeItEasy";
+		String str2= new String("#Padhai");
+		char name[]= {'j','A','V','a'};
+		String str3=new String(name);
+		String str4=new String(name,2,3);
+		String str5=new String(str4);
+		
+		System.out.println("\n \t 1st string: "+str1);
+		System.out.println("\n \t 2nd string: "+str2);
+		System.out.println("\n \t 3rd string: "+str3);
+		System.out.println("\n \t 4rth string: "+str4);
+		System.out.println("\n \t 5th string: "+str5);
+	}
+}

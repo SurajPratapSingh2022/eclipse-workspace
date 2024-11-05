@@ -1,0 +1,25 @@
+package com.sps.versionUpdate;
+//string expression under switch example
+public class Java8SwitchExample1 {
+	public static void main(String[] args) {
+		int a,b;
+		a=10; b=20;
+		String c="Sub";
+		switch(c)
+		{
+		case "Add":
+			System.out.println(a+b);
+			break;
+		case "Sub":
+			System.out.println(a-b);
+			break;
+		case "Mul":
+			System.out.println(a*b);
+			break;
+		case "Div":
+			System.out.println(a/b);
+		default:
+			System.out.println("Invalid Choice");
+		}
+	}
+}

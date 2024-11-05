@@ -1,0 +1,15 @@
+package com.sps.javaCollection;
+
+import java.util.LinkedList;
+public class LinkedListExample {
+	public static void main(String[] args) {
+		LinkedList<String> Name=new LinkedList<String>();
+		Name.add("Ankit");
+		Name.add("Ankush");
+		Name.add("altaf");
+		System.out.println(Name);
+		Name.addFirst("Rohit");
+		Name.addLast("Amir");
+		
+	}
+}

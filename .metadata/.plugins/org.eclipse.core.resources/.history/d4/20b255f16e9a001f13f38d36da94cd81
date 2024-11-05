@@ -1,0 +1,27 @@
+package com.sps.main;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+
+public class FileInputStreamExamle1 {
+    public static void main(String[] args) {
+        FileInputStream infile = null;
+        try {
+            infile = new FileInputStream("C:\Users\suraj\eclipse-workspace\JavaProg\src\com\sps\main\test.txt");  // Updated file name to "a1.txt"
+            int b;
+            while ((b = infile.read()) != -1) {  // Corrected assignment and condition
+                System.out.print((char) b);
+            }
+        } catch (IOException e) {
+            System.out.println("An error occurred: " + e.getMessage());
+        } finally {
+            if (infile != null) {
+                try {
+                    infile.close();
+                } catch (IOException e) {
+                    System.out.println("Failed to close the file: " + e.getMessage());
+                }
+            }
+        }
+    }
+}

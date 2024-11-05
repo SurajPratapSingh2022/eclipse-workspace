@@ -1,0 +1,14 @@
+package com.sps.javaNetworking;
+//server client ka code
+import java.io.*;
+import java.net.*;
+public class SocketClient {
+	public static void main(String[] args) {
+		Socket s=new Socket("Local Host: ",1212);
+		DataOutputStream obj2=new DataOutputStream(s.getOutputStream());
+		obj2.writeUTF("Heyal");
+		obj2.flush();
+		obj2.close();
+		s.close();
+	}
+}

@@ -1,0 +1,9 @@
+package com.sps.javaAbstraction;
+
+public class amit implements work{
+	public void calc(int a,int b) {
+		System.out.println("Sum: "+(a+b));
+	}
+
+	
+}

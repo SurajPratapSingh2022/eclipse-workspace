@@ -1,0 +1,8 @@
+package com.sps.versionUpdate;
+//enum as a expression in switch example
+public class Java8SwitchExample2 {
+	public static void main(String[] args) {
+		String s="This is my country";
+		System.out.println(s);
+	}
+}

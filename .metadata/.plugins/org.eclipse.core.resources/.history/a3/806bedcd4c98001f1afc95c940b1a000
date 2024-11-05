@@ -1,0 +1,17 @@
+package com.sps.generics;
+
+public class Demo<T>{
+	T v;
+	public Demo(T v) {
+		this.v=v;
+	}
+	public T getValue() {
+		return v;
+	}
+}
+public class GenericsExample2 {
+	public static void main(String[] args) {
+		Demo<String> obj=new Demo<String>("Komal");
+		System.out.println(obj.getValue());
+	}
+}

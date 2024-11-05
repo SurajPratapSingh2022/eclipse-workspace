@@ -1,0 +1,9 @@
+package com.sps.javaVersionUpdate;
+
+public class Java15CodeBlockExample2 {
+	public static void main(String[] args) {
+		String s="""
+				Hello %s your salary is %d
+				""".formatted("Dhananjay",90000);
+	}
+}

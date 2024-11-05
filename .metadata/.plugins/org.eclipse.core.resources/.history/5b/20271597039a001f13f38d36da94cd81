@@ -1,0 +1,8 @@
+package com.sps.javaVersionUpdate;
+
+public record Person2(int pid, String pname, int page, String paddr) {
+	
+}
+public class Java17RecordsExample2 {
+
+}

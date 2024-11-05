@@ -1,0 +1,13 @@
+package com.sps.main;
+import java.io.*;
+public class FileOutputStreamExample1 {
+	public static void main(String[] args) {
+		FileOutputStream ofile=null;
+		byte b1[]= {'A','B'};
+		try {
+			ofile=new FileOutputStream(C:\\Users\\suraj\\eclipse-workspace\\JavaProg\\src\\com\\sps\\main\\test.txt");
+			ofile.write(b1);
+			ofile.close();
+		}
+	}
+}

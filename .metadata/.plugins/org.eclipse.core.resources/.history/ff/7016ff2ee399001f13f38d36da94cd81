@@ -1,0 +1,27 @@
+package com.sps.javaVersionUpdate;
+//sealed class example
+sealed class Human permits Anuj,Anjali{
+	public void info() {
+		System.out.println("Human Class");
+	}
+}
+non-sealed class Anuj extends Human{
+	public void info() {
+		System.out.println("Hi Friends, I am Anuj.");
+	}
+}
+non-sealed class Anjali extends Human{
+	public void info() {
+		System.out.println("Hi Friends, I am Anjali");
+	}
+}
+public class SealedClassExample1 {
+	public static void main(String[] args) {
+		Human h1=new Anuj();
+		Human h2=new Anjali();
+		h1.info();
+		h2.info();
+		Human h3=new tommy();
+		h3.info();
+	}
+}

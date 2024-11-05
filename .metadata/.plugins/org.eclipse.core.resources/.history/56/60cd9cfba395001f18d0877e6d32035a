@@ -1,0 +1,10 @@
+package com.sps.javaNetworking;
+
+import java.net.*;
+public class Inlet {
+	public static void main(String[] args) {
+		InletAddress ip = InletAddress getByName("https://www.ssl2buy.com");
+		System.out.println(ip.getHostName());
+		System.out.println(ip.getHostAddress());
+	}
+}

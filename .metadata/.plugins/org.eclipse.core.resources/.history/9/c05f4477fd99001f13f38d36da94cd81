@@ -1,0 +1,16 @@
+package com.sps.javaVersionUpdate;
+
+public class Java13YieldKeywordExample1 {
+	public static void main(String[] args) {
+		int a=10,b=2,c;
+		String ch,r;
+		ch="add";
+		c=switch(ch) {
+		case "add"->a+b;
+		case "sub"->a-b;
+		case "mul"->a*b;
+		case "div"->a/b;
+		default->-1;
+		};
+	}
+}

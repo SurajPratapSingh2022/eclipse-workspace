@@ -1,0 +1,26 @@
+package com.sps.javaVersionUpdate;
+
+import java.util.ArrayList;
+
+class Emp1{
+	int empid,salary;
+	String ename;
+	public Emp1(int empid, String ename, int salary) {
+		this.empid=empid;
+		this.ename=ename;
+		this.salary=salary;
+	}
+}
+public class JavaCompareInterfaceExample1 {
+	public static void main(String[] args) {
+		ArrayList<Emp1> elst=new ArrayList<>();
+		elst.add(new Emp1(101,"Pankaj",80000));
+		elst.add(new Emp1(102,"Alok",80000));
+		elst.add(new Emp1(103,"Binu",80000));
+		elst.add(new Emp1(104,"Anshu",80000));
+		elst.add(new Emp1(105,"Joya",80000));
+		for(Emp1 e:elst) {
+			System.out.println(e.empid+"\t"+e.ename+"\t"+e.salary);
+		}
+	}
+}

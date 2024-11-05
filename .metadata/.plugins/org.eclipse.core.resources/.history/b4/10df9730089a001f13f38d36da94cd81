@@ -1,0 +1,5 @@
+package com.sps.javaVersionUpdate;
+
+public record Java17RecordsExample2(int pid, String pname, int page, String paddr) {
+	
+}
