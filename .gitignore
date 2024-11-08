@@ -1,2 +1,6 @@
 /.metadata/
 Enotes_Api_Service/
+*.settings/
+target/
+*.classpath
+*.project
