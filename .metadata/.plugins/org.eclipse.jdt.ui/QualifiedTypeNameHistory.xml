@@ -26,4 +26,6 @@
     <fullyQualifiedTypeName name="java.util.stream.Stream"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="javax.swing.text.html.parser.Element"/>
+    <fullyQualifiedTypeName name="java.lang.annotation.RetentionPolicy"/>
 </qualifiedTypeNameHistroy>

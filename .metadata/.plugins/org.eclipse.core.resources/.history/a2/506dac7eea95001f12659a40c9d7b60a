@@ -1,9 +1,0 @@
-package com.sps.javaCollection;
-
-import java.util.Stack;
-public class Stack {
-	public static void main(String[] args) {
-		Stack<String> Name=new Stack<>();
-		
-	}
-}
